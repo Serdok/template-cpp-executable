@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 list(PREPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 
 # Set project parameters / options
-option(BUILD_TESTING "Configure CMake to add tests targets" OFF)
+option(ENABLE_TESTING "Configure CMake to add tests targets" OFF)
 add_subdirectory(scripts/)
 
 # Include third-party projects
@@ -19,6 +19,6 @@ add_subdirectory(src/)
 # Link libraries
 
 # Enable testing if requested
-if (ENABLE_TESTS)
+if (ENABLE_TESTING)
     add_subdirectory(tests/)
 endif()
